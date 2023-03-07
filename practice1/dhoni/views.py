@@ -10,10 +10,9 @@ def home(request):
     return render(request, 'addition.html')
 
 def addition(request):
-    print("*"*50)
-    print(request)
     a = request.GET["num1"]
     b = request.GET["num2"]
     print(a, b)
     c = int(a) + int(b)
+    print(c)
     return HttpResponse(c)
